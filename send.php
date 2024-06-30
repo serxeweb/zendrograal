@@ -21,7 +21,7 @@
                         confirmButtonText: 'OK'
 
                     }).then(function() {
-                        window.location.href = 'index.php';
+                        window.location.href = 'index.html';
                     });
                 };
             </script>
@@ -38,7 +38,7 @@
                         confirmButtonText: 'OK'
 
                     }).then(function() {
-                        window.location.href = 'index.php';
+                        window.location.href = 'index.html';
                     });
                 };
             </script>
