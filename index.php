@@ -1,3 +1,4 @@
+<?php include"send.php"?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -378,7 +379,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <form action="index.php" method="post">
+                <form action="send.php" method="post">
                     <div class="mb-3">
                         <label for="name" class="form-label text-light">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -497,54 +498,7 @@
             }
         }
     </script>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-
-        $to = "esquejomarktristan@gmail.com";  // Replace with your email address
-        $subject = "New Contact Form Submission";
-        $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-        $headers = "From: $email";
-
-        if (mail($to, $subject, $body, $headers)) {
-    ?>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-            <script>
-                window.onload = function() {
-                    Swal.fire({
-                        title: 'MESSAGE SENT!',
-                        text: 'Thank you for contacting us!',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-
-                    }).then(function() {
-                        window.location.href = 'index.php';
-                    });
-                };
-            </script>
-    <?php
-        } else {
-           ?>
-           <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-            <script>
-                window.onload = function() {
-                    Swal.fire({
-                        title: 'MESSAGE HAS NOT BEEN SENT',
-                    
-                        icon: 'error',
-                        confirmButtonText: 'OK'
-
-                    }).then(function() {
-                        window.location.href = 'index.php';
-                    });
-                };
-            </script>
-           <?php
-        }
-    }
-    ?>
+    
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
