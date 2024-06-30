@@ -392,7 +392,7 @@
                         <label for="message" class="form-label text-light">Message</label>
                         <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="btn" id="button">Send</button>
+                    <button type="submit" class="btn" id="button" name="submit">Send</button>
                 </form>
             </div>
         </div>
