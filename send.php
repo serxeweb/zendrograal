@@ -10,39 +10,9 @@
         $headers = "From: $email";
 
         if (mail($to, $subject, $body, $headers)) {
-    ?>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-            <script>
-                window.onload = function() {
-                    Swal.fire({
-                        title: 'MESSAGE SENT!',
-                        text: 'Thank you for contacting us!',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-
-                    }).then(function() {
-                        window.location.href = 'index.html';
-                    });
-                };
-            </script>
-    <?php
+            echo "Message sent";
         } else {
-           ?>
-           <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-            <script>
-                window.onload = function() {
-                    Swal.fire({
-                        title: 'MESSAGE HAS NOT BEEN SENT',
-                    
-                        icon: 'error',
-                        confirmButtonText: 'OK'
-
-                    }).then(function() {
-                        window.location.href = 'index.html';
-                    });
-                };
-            </script>
-           <?php
+           echo "Error";
         }
     }
     ?>
